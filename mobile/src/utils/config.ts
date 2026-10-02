@@ -1,14 +1,10 @@
 import { Platform } from 'react-native';
 
-// For Android Emulator use 10.0.2.2, for iOS/Web use localhost
-// When deploying backend to Render/Railway, replace this URL with the live hosted API URL
-export const API_BASE_URL = Platform.OS === 'android'
-  ? 'http://10.0.2.2:5000/api'
-  : 'http://localhost:5000/api';
+// Live Render Hosted Backend API URL (SLIIT SE2020 Production Deployment)
+const LIVE_SERVER_URL = 'https://campusbites-qoov.onrender.com';
 
-export const UPLOADS_BASE_URL = Platform.OS === 'android'
-  ? 'http://10.0.2.2:5000/'
-  : 'http://localhost:5000/';
+export const API_BASE_URL = `${LIVE_SERVER_URL}/api`;
+export const UPLOADS_BASE_URL = `${LIVE_SERVER_URL}/`;
 
 /**
  * Safely builds a full image URL from a stored image path.
